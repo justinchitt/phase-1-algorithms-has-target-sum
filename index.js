@@ -1,5 +1,24 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  let newArry = []
+  for (index of array){
+    for (number of array) {
+      if (index !== number) {
+      let sum = index + number
+      newArry.push(sum)
+      }
+    }
+  }
+  let final = newArry.find((element) => pleaseWork(element, target))
+  if (final === target) {
+    return true
+  } else {
+    return false
+  }
+}
+
+function pleaseWork(element, target) {
+  return element === target
 }
 
 /* 
@@ -29,6 +48,9 @@ if (require.main === module) {
 
   console.log("Expecting: false");
   console.log("=>", hasTargetSum([1, 2, 5], 4));
+
+  console.log("Expecting: false");
+  console.log("=>", hasTargetSum([2, 2, 3, 3], 4));
 }
 
 module.exports = hasTargetSum;
